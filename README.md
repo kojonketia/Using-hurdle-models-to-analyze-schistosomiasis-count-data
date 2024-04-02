@@ -48,9 +48,10 @@ In the "ModelComparison.Rmd" file, "count_data" is the name assigned to the schi
 
 * The ***AIC*** and ***BIC*** are derived with the syntax below `AIC({assigned model name})` and `BIC({assigned model name})` respectively.
 
-Model predicted and observed values are derived from ***ROOTOGRAM*** model where its output is a plot of the expected values overlayed on the observed values but when an argument `plot = FALSE` is set, the values in a table form is assigned to a name given
 
 #### Rootograms
+
+Model predicted and observed values are derived from ***ROOTOGRAM*** model where its output is a plot of the expected values overlayed on the observed values but when an argument `plot = FALSE` is set, the values in a table form is assigned to a name given
 
 For the observed and expected values for the model name `poisson.model_all10` and others, the observed and expected value is derived with the syntax below
 ```
@@ -65,4 +66,20 @@ hurdleNB_results = rootogram(hurdlenb.model_all10, max = 50, style = "standing",
 and the output results are saved as an excel file with the command
 ```
 write_xlsx(poisson_results,"C:\\Users\\User\\Desktop\\paper review\\model results\\poisson_results.xlsx")
+```
+#### Odds ratio
+
+Calculating the odds ratio and 95% confidence interval for each predictor variable from the hurdle NB model's results 
+
+```
+exp(cbind(Odds_Ratio = coef(hurdlenb.model_all10), confint(hurdlenb.model_all10)))
+```
+
+#### Likelihood ratio test
+
+The syntax for finding the likelihood ratio test for nested models (between using 5 and 10 predictors of the same model) to determine if the introduction of extra parameter is necessary for zero-capturing is stated below
+
+```
+# for Poisson between 5 predctors and 10 predictors
+lrtest(poisson.model_all5, poisson.model_all10) 
 ```
