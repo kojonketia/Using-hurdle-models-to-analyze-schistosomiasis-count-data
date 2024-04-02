@@ -47,3 +47,5 @@ In the "ModelComparison.Rmd" file, "count_data" is the name assigned to the schi
 * The models are assigned names in the format `{modelname}.model_{intensity data type}{number of variable}`. For example, if the Poisson model is applied using all intensity data and 10 predictors then we have the name assign to such syntax as `poisson.model_all10`. For a negative binomial applied with the low intensity data with 5 predictors, we will have `negbin.model_all10`.
 
 * The ***AIC*** and ***BIC*** are derived with the syntax below `AIC({assigned model name})` and `BIC({assigned model name})` respectively.
+
+Model predicted and observed values are derived from ***ROOTOGRAM*** model where its output is a plot of the expected values overlayed on the observed values but when an argument `plot = FALSE` is set, the values in a table form is assigned to a name given
