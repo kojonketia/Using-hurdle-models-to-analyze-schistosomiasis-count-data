@@ -15,6 +15,7 @@ The standard Poisson, negative binomial (NB), zero-inflated Possion (ZIP), zero-
 
 Their corresponding R syntax is 
 
+```
 Poisson = "glm("dependent variable ~ x1 + x2 + ... + xn", family = 'poisson', data = count_data)"
 
 NB = "glm("dependent variable ~ x1 + x2 + ... + xn", family = negative.binomial(1), data = count_data"
@@ -22,4 +23,5 @@ NB = "glm("dependent variable ~ x1 + x2 + ... + xn", family = negative.binomial(
 ZIP = "zeroinfl(dependent variable ~ x1 + x2 + ... + xn, data = count_data, dist = "poisson")"
 
 ZINB = "zeroinfl(dependent variable ~ x1 + x2 + ... + xn, data = count_data, dist = "negbin")"
+```
 
