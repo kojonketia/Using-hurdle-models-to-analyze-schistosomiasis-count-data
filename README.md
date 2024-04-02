@@ -33,7 +33,7 @@ poisson <- glm("dependent variable ~ x1 + x2 + ... + xn", family = 'poisson', da
 summary(poisson)
 ```
 
-In the "ModelComparison.Rmd" file, the "count_data" is the name assign to the schistosomiasis count data. 
+In the "ModelComparison.Rmd" file, "count_data" is the name assign to the schistosomiasis count data. 
 
 These contains the columns; "Age", "Sex", "Class", "Community", "S_haematobium" , "S_mansoni", "Parent_Occupation", "Pipe_borne", "Tanker_treated", "Tanker_Untreated", "River_Stream", "Well_Borehole", "Age_group", "EduLevel", "Area", "schistosomiasis" 
 
