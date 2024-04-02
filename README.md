@@ -38,7 +38,7 @@ The libraries are readxl, mass, pscl
 
 In the "ModelComparison.Rmd" file, "count_data" is the name assigned to the schistosomiasis count data. 
 
-* These contains the columns; "Age", "Sex", "Class", "Community", "S_haematobium" , "S_mansoni", "Parent_Occupation", "Pipe_borne", "Tanker_treated", "Tanker_Untreated", "River_Stream", "Well_Borehole", "Age_group", "EduLevel", "Area", "schistosomiasis" 
+* The data contains the columns; "Age", "Sex", "Class", "Community", "S_haematobium" , "S_mansoni", "Parent_Occupation", "Pipe_borne", "Tanker_treated", "Tanker_Untreated", "River_Stream", "Well_Borehole", "Age_group", "EduLevel", "Area", "schistosomiasis" 
 
 * The ***five predictors*** used are; Age_group, Sex, Educational level, Area and Parent's occupation and ***ten predictors*** used are; Age_group, Sex, Educational level, Area, Parent's occupation, Pipe_borne, Tanker_treated, Tanker_Untreated, River_Stream and Well_Borehole
 
