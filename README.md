@@ -1,7 +1,7 @@
 # Using-hurdle-models-to-analyze-schistosomiasis-count-data
 The model codes and analysis for the paper "Using hurdle models to analyze schistosomiasis count data of school children in the southern areas of Ghana" are presented here. It is a combination of Python and R codes.
 
-# Files
+## Files
 
 The Rmd file contains the model codes used. Six distinct models under different scenarios were used.
 
@@ -33,11 +33,12 @@ poisson <- glm("dependent variable ~ x1 + x2 + ... + xn", family = 'poisson', da
 summary(poisson)
 ```
 
-In the "ModelComparison.Rmd" file, "count_data" is the name assign to the schistosomiasis count data. 
+In the "ModelComparison.Rmd" file, "count_data" is the name assigned to the schistosomiasis count data. 
 
 These contains the columns; "Age", "Sex", "Class", "Community", "S_haematobium" , "S_mansoni", "Parent_Occupation", "Pipe_borne", "Tanker_treated", "Tanker_Untreated", "River_Stream", "Well_Borehole", "Age_group", "EduLevel", "Area", "schistosomiasis" 
 
-The five predictors used are; Age_group, Sex, Educational level, Area and Parent's occupation
+* The ***five predictors*** used are; Age_group, Sex, Educational level, Area and Parent's occupation and ***ten predictors*** used are; Age_group, Sex, Educational level, Area, Parent's occupation, Pipe_borne, Tanker_treated, Tanker_Untreated, River_Stream and Well_Borehole
 
-The ten predictors used are; Age_group, Sex, Educational level, Area, Parent's occupation, Pipe_borne, Tanker_treated, Tanker_Untreated, River_Stream and Well_Borehole
+* The different intensity data used are; the ***all intensity*** (all sample data) and the ***low intensity*** count data named "count_data" and "low_intensity_data" respectively in the Rmd file.
+
 
