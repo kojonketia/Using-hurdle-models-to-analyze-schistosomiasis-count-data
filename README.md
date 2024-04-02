@@ -83,3 +83,5 @@ The syntax for finding the likelihood ratio test for nested models (between usin
 # for Poisson between 5 predctors and 10 predictors
 lrtest(poisson.model_all5, poisson.model_all10) 
 ```
+
+### ipynb
