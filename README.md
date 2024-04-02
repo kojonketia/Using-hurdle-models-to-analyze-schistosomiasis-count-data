@@ -44,4 +44,4 @@ In the "ModelComparison.Rmd" file, "count_data" is the name assigned to the schi
 
 * The different intensity data used are; the ***all intensity*** (all sample data) and the ***low intensity*** count data named "count_data" and "low_intensity_data" respectively in the Rmd file.
 
-* The models are assigned names in the format "{modelname}.model_{intensity data type}{number of variable}. For example, if the Poisson model is applied using all intensity data and 10 predictors then we have the name assign to such syntax as `poisson.model_all10` 
+* The models are assigned names in the format `{modelname}.model_{intensity data type}{number of variable}`. For example, if the Poisson model is applied using all intensity data and 10 predictors then we have the name assign to such syntax as `poisson.model_all10`. For a negative binomial applied with the low intensity data with 5 predictors, we will have `negbin.model_all10`.
