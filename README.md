@@ -49,3 +49,20 @@ In the "ModelComparison.Rmd" file, "count_data" is the name assigned to the schi
 * The ***AIC*** and ***BIC*** are derived with the syntax below `AIC({assigned model name})` and `BIC({assigned model name})` respectively.
 
 Model predicted and observed values are derived from ***ROOTOGRAM*** model where its output is a plot of the expected values overlayed on the observed values but when an argument `plot = FALSE` is set, the values in a table form is assigned to a name given
+
+#### Rootograms
+
+For the observed and expected values for the model name `poisson.model_all10` and others, the observed and expected value is derived with the syntax below
+```
+poisson_results = rootogram(poisson.model_all10, max = 50, style = "standing", plot = FALSE)
+negbin_results <- rootogram(negbin.model_all10, max = 50, style = "standing", plot = FALSE)
+zip_results = rootogram(zip.model_all10, max = 50, style = "standing", plot = FALSE)
+zinb_results = rootogram(zinb.model_all10, max = 50, style = "standing", plot = FALSE)
+hurdlePoisson_results = rootogram(hurdlep.model_all10, max = 50, style = "standing", plot = FALSE)
+hurdleNB_results = rootogram(hurdlenb.model_all10, max = 50, style = "standing", plot = FALSE)
+```
+
+and the output results are saved as an excel file with the command
+```
+write_xlsx(poisson_results,"C:\\Users\\User\\Desktop\\paper review\\model results\\poisson_results.xlsx")
+```
