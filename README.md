@@ -54,7 +54,7 @@ In the "ModelComparison.Rmd" file, "count_data" is the name assigned to the schi
 Model predicted and observed values are derived from ***ROOTOGRAM*** model where its output is a plot of the expected values overlayed on the observed values but when an argument `plot = FALSE` is set, the values in a table form is assigned to a name given
 
 For the observed and expected values for the model name `poisson.model_all10` and others, the observed and expected value is derived with the syntax below
-```
+```r
 poisson_results = rootogram(poisson.model_all10, max = 50, style = "standing", plot = FALSE)
 negbin_results <- rootogram(negbin.model_all10, max = 50, style = "standing", plot = FALSE)
 zip_results = rootogram(zip.model_all10, max = 50, style = "standing", plot = FALSE)
