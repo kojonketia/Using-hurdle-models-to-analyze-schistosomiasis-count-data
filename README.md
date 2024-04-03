@@ -85,11 +85,13 @@ lrtest(poisson.model_all5, poisson.model_all10)
 ```
 
 ### ipynb
-
+#### Model's residuals
+The model residual was calculated by deducting the observed values from the expected values. However the corresponding plots shows
 ```math
-\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)
+residual = expected - observed.
+sqrt{residual}  = \sqrt{residual}, \text{if x is positive} and 
 ```
-
+and this is defined by the python code below. If 
 ```python
 '''
 The square root of the difference between the expected and observed values
