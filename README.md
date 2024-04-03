@@ -88,11 +88,11 @@ lrtest(poisson.model_all5, poisson.model_all10)
 #### Model's residuals
 The model residual was calculated by deducting the observed values from the expected values. However the corresponding plots shows
 ```math
-residual = expected - observed. \\
+\displaylines{ residual = expected - observed. \\
 \text{if residual is positive, then the square root is calculated by } \\
 \sqrt{residual} \\
 \text{if residual is negative, then the square root is calculated by } \\
--\sqrt{|residual|}
+-\sqrt{|residual|} }
 ```
 and this is defined by the python code below. If 
 ```python
