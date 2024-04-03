@@ -85,3 +85,14 @@ lrtest(poisson.model_all5, poisson.model_all10)
 ```
 
 ### ipynb
+
+```
+# The square root of the difference between the expected and observed values
+
+poisson_r = np.array(list(map(lambda x: np.sqrt(x) if x>= 0 else -np.sqrt(abs(x)), poisson_residuals))).round(0)
+negbin_r = np.array(list(map(lambda x: np.sqrt(x) if x>= 0 else -np.sqrt(abs(x)), negbin_residuals))).round(0)
+zip_r = np.array(list(map(lambda x: np.sqrt(x) if x>= 0 else -np.sqrt(abs(x)), zip_residuals))).round(0)
+zinb_r = np.array(list(map(lambda x: np.sqrt(x) if x>= 0 else -np.sqrt(abs(x)), zinb_residuals))).round(0)
+hurdlePoisson_r = np.array(list(map(lambda x: np.sqrt(x) if x>= 0 else -np.sqrt(abs(x)), hurdlePoisson_residuals))).round(0)
+hurdleNB_r = np.array(list(map(lambda x: np.sqrt(x) if x>= 0 else -np.sqrt(abs(x)), hurdleNB_residuals))).round(0)
+```
