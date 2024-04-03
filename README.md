@@ -91,12 +91,34 @@ lrtest(poisson.model_all5, poisson.model_all10)
 ```
 
 ```python
-# The square root of the difference between the expected and observed values
+'''
+The square root of the difference between the expected and observed values
 
-poisson_r = np.array(list(map(lambda x: np.sqrt(x) if x>= 0 else -np.sqrt(abs(x)), poisson_residuals))).round(0)
-negbin_r = np.array(list(map(lambda x: np.sqrt(x) if x>= 0 else -np.sqrt(abs(x)), negbin_residuals))).round(0)
-zip_r = np.array(list(map(lambda x: np.sqrt(x) if x>= 0 else -np.sqrt(abs(x)), zip_residuals))).round(0)
-zinb_r = np.array(list(map(lambda x: np.sqrt(x) if x>= 0 else -np.sqrt(abs(x)), zinb_residuals))).round(0)
-hurdlePoisson_r = np.array(list(map(lambda x: np.sqrt(x) if x>= 0 else -np.sqrt(abs(x)), hurdlePoisson_residuals))).round(0)
-hurdleNB_r = np.array(list(map(lambda x: np.sqrt(x) if x>= 0 else -np.sqrt(abs(x)), hurdleNB_residuals))).round(0)
+"{modelname}_r" is the assigned name given to the square root of the model residual.
+
+Given that the value of the difference between the expected and observed values could be negative the "lambda" function named "find_sqrt" is defined to consider the following cases during computation.
+
+Suppose x is a value then
+- return the square root of x, if x >= 0 (zero or positive)
+    else (if x is negative) return the negative of the square root of the absolute of x.
+
+    So, if x is 16 the return value is 4
+    Also, if x is -9, then the return value is -(sqrt(abs(-9))) = -3
+
+The map function maps the each values in the model_results into the function, return a list with "list(map(...))", and converted into a numpy array then rounded to the nearest whole number
+''' 
+
+find_sqrt = lambda x: np.sqrt(x) if x>= 0 else -np.sqrt(abs(x))
+
+poisson_r = np.array(list(map(find_sqrt, poisson_residuals))).round(0)
+
+negbin_r = np.array(list(map(find_sqrt, negbin_residuals))).round(0)
+
+zip_r = np.array(list(map(find_sqrt, zip_residuals))).round(0)
+
+zinb_r = np.array(list(map(find_sqrt, zinb_residuals))).round(0)
+
+hurdlePoisson_r = np.array(list(map(find_sqrt, hurdlePoisson_residuals))).round(0)
+
+hurdleNB_r = np.array(list(map(find_sqrt, hurdleNB_residuals))).round(0)
 ```
