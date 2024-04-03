@@ -86,7 +86,7 @@ lrtest(poisson.model_all5, poisson.model_all10)
 
 ### ipynb
 
-```
+```python
 # The square root of the difference between the expected and observed values
 
 poisson_r = np.array(list(map(lambda x: np.sqrt(x) if x>= 0 else -np.sqrt(abs(x)), poisson_residuals))).round(0)
