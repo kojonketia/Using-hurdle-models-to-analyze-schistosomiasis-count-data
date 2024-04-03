@@ -55,12 +55,12 @@ Model predicted and observed values are derived from ***ROOTOGRAM*** model where
 
 For the observed and expected values for the model name `poisson.model_all10` and others, the observed and expected value is derived with the syntax below
 ```r
-poisson_results = rootogram(poisson.model_all10, max = 50, style = "standing", plot = FALSE)
+poisson_results <- rootogram(poisson.model_all10, max = 50, style = "standing", plot = FALSE)
 negbin_results <- rootogram(negbin.model_all10, max = 50, style = "standing", plot = FALSE)
-zip_results = rootogram(zip.model_all10, max = 50, style = "standing", plot = FALSE)
-zinb_results = rootogram(zinb.model_all10, max = 50, style = "standing", plot = FALSE)
-hurdlePoisson_results = rootogram(hurdlep.model_all10, max = 50, style = "standing", plot = FALSE)
-hurdleNB_results = rootogram(hurdlenb.model_all10, max = 50, style = "standing", plot = FALSE)
+zip_results <- rootogram(zip.model_all10, max = 50, style = "standing", plot = FALSE)
+zinb_results <- rootogram(zinb.model_all10, max = 50, style = "standing", plot = FALSE)
+hurdlePoisson_results <- rootogram(hurdlep.model_all10, max = 50, style = "standing", plot = FALSE)
+hurdleNB_results <- rootogram(hurdlenb.model_all10, max = 50, style = "standing", plot = FALSE)
 ```
 
 and the output results are saved as an excel file with the command
