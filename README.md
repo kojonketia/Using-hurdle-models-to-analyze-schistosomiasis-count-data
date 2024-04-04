@@ -85,6 +85,18 @@ lrtest(poisson.model_all5, poisson.model_all10)
 ```
 
 ### ipynb
+The reqyuired libraries are pandas, numpy, scipy and statmodels
+
+First, the age, community and person's class in school values were grouped into groups which are the age group (<10, 10-15 and >15), area (rural and urban) and educational level (preschool, primary and junior high) respectively. 
+
+#### Model's AIC values
+In this section the AIC values of all scenarios used under different models were uploaded for visual comparison
+
+#### Observed and model's expected values
+The folder "model results" contains the each model's expected values. 
+
+These values are then plotted against the observed values in 1) a bars against each other in log aixs and 2) the expected values overlaid on the bars of the observed values
+
 #### Model's residuals
 The model residual was calculated by deducting the observed values from the expected values. However the corresponding plots shows
 ```math
