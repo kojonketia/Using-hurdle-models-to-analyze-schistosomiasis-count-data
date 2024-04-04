@@ -84,8 +84,8 @@ The syntax for finding the likelihood ratio test for nested models (between usin
 lrtest(poisson.model_all5, poisson.model_all10) 
 ```
 
-### ipynb
-The reqyuired libraries are pandas, numpy, scipy and statmodels
+### Analysis_and_figures_plotting.ipynb
+The required libraries are pandas (version '2.1.4'), numpy (version '1.26.3'), scipy (version '1.11.4'), statmodels (version '0.14.0'), matplotlib (version '3.8.0') and seaborn (version '0.13.2')
 
 First, the age, community and person's class in school values were grouped into groups which are the age group (<10, 10-15 and >15), area (rural and urban) and educational level (preschool, primary and junior high) respectively. 
 
