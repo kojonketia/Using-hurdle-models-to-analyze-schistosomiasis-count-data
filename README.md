@@ -1,5 +1,5 @@
 # Using-hurdle-models-to-analyze-schistosomiasis-count-data
-The model codes and analysis for the paper "Using hurdle models to analyze schistosomiasis count data of school children in the southern areas of Ghana" are presented here. It is a combination of Python and R codes.
+The excel file named "schistosomiasis_count_data.xlsx" contains the demographic features and the "Dataset.xlsx" is the dataset after extra columns where certain variables were grouped and it is what was used for analysis.
 
 ## Files
 
