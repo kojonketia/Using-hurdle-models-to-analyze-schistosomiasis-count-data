@@ -64,14 +64,14 @@ hurdleNB_results <- rootogram(hurdlenb.model_all10, max = 50, style = "standing"
 ```
 
 and the output results are saved as an excel file with the command
-```
+```r
 write_xlsx(poisson_results,"C:\\Users\\User\\Desktop\\paper review\\model results\\poisson_results.xlsx")
 ```
 #### Odds ratio
 
 Calculating the odds ratio and 95% confidence interval for each predictor variable from the hurdle NB model's results 
 
-```
+```r
 exp(cbind(Odds_Ratio = coef(hurdlenb.model_all10), confint(hurdlenb.model_all10)))
 ```
 
@@ -79,7 +79,7 @@ exp(cbind(Odds_Ratio = coef(hurdlenb.model_all10), confint(hurdlenb.model_all10)
 
 The syntax for finding the likelihood ratio test for nested models (between using 5 and 10 predictors of the same model) to determine if the introduction of extra parameter is necessary for zero-capturing is stated below
 
-```
+```r
 # for Poisson between 5 predctors and 10 predictors
 lrtest(poisson.model_all5, poisson.model_all10) 
 ```
